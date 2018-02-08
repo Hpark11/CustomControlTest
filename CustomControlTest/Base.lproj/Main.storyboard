@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,15 +13,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomControlTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4t-9J-sdG">
+                                <rect key="frame" x="39" y="42" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="W6K-ac-dO5" appends="YES" id="g8b-zZ-A59"/>
+                                    <outletCollection property="gestureRecognizers" destination="2L7-z0-6t7" appends="YES" id="Nen-cl-a5u"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wqkejqwklejlkwqejklqwneklqwnekl2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-sC-1CI" customClass="SwipableLabel" customModule="CustomControlTest" customModuleProvider="target">
+                                <rect key="frame" x="51.5" y="216" width="272.5" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3oT-09-jYK" appends="YES" id="R44-Pa-6YH"/>
+                                </connections>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h4t-9J-sdG" secondAttribute="trailing" constant="96" id="F38-Ic-YNu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h4t-9J-sdG" secondAttribute="bottom" constant="497" id="QLQ-jX-2Ti"/>
+                            <constraint firstItem="LWA-sC-1CI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQa-rE-hog"/>
+                            <constraint firstItem="h4t-9J-sdG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="eBK-Ee-Edh"/>
+                            <constraint firstItem="h4t-9J-sdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="t8K-w1-fSI"/>
+                            <constraint firstItem="LWA-sC-1CI" firstAttribute="top" secondItem="h4t-9J-sdG" secondAttribute="bottom" constant="46" id="yQM-Et-elQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="testableLabel" destination="LWA-sC-1CI" id="ShP-gO-R9I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="W6K-ac-dO5">
+                    <connections>
+                        <action selector="isItHappened:" destination="BYZ-38-t0r" id="8He-y9-tDa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="2L7-z0-6t7">
+                    <connections>
+                        <action selector="isItHappened:" destination="BYZ-38-t0r" id="bI9-ZH-lI0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="3oT-09-jYK">
+                    <connections>
+                        <action selector="happenedInLabel:" destination="BYZ-38-t0r" id="kcN-Y0-knt"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
         </scene>
     </scenes>

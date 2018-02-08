@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3AB5D3202ABCD600F7B2C1 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */; };
 		5A8CF24B2029C0BF00A1F24E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF24A2029C0BF00A1F24E /* AppDelegate.swift */; };
 		5A8CF24D2029C0BF00A1F24E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF24C2029C0BF00A1F24E /* ViewController.swift */; };
 		5A8CF2502029C0BF00A1F24E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF24E2029C0BF00A1F24E /* Main.storyboard */; };
 		5A8CF2522029C0BF00A1F24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF2512029C0BF00A1F24E /* Assets.xcassets */; };
 		5A8CF2552029C0BF00A1F24E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF2532029C0BF00A1F24E /* LaunchScreen.storyboard */; };
+		5A8CF25D2029C1AB00A1F24E /* SwipableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		5A8CF2472029C0BF00A1F24E /* CustomControlTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControlTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8CF24A2029C0BF00A1F24E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8CF24C2029C0BF00A1F24E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		5A8CF2512029C0BF00A1F24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A8CF2542029C0BF00A1F24E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A8CF2562029C0BF00A1F24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				5A8CF2512029C0BF00A1F24E /* Assets.xcassets */,
 				5A8CF2532029C0BF00A1F24E /* LaunchScreen.storyboard */,
 				5A8CF2562029C0BF00A1F24E /* Info.plist */,
+				5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */,
+				5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */,
 			);
 			path = CustomControlTest;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3AB5D3202ABCD600F7B2C1 /* SwipeDirection.swift in Sources */,
 				5A8CF24D2029C0BF00A1F24E /* ViewController.swift in Sources */,
 				5A8CF24B2029C0BF00A1F24E /* AppDelegate.swift in Sources */,
+				5A8CF25D2029C1AB00A1F24E /* SwipableLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ESGSL5P9;
 				INFOPLIST_FILE = CustomControlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hPark.CustomControlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ESGSL5P9;
 				INFOPLIST_FILE = CustomControlTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hPark.CustomControlTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -85,12 +85,10 @@ class SwipableLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        print("qeqwrqwerer")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        print("324234234234r")
     }
     
     deinit {
@@ -125,7 +123,7 @@ class SwipableLabel: UILabel {
         auxLabel.textColor = textColor
         auxLabel.backgroundColor = .clear
         auxLabel.transform = affineTransform
-        auxLabel.autoresizingMask = .flexibleWidth
+        auxLabel.adjustsFontSizeToFitWidth = true
         
         auxLabel.alpha = 0
         addSubview(auxLabel)

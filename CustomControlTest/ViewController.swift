@@ -5,7 +5,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var testableLabel: SwipableLabel!
     
-    var testWords = ["안녕하세요", "반갑습니다", "뭐하시나요?"]
+    var testWords = ["안녕하세요", "반갑습니다", "뭐하시나요?", "이건 정말정말 긴 텍스트 입니다 정말인가요?"]
     
     @IBAction func isItHappened(_ sender: Any) {
         print("It is happened")
@@ -17,9 +17,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testableLabel.delegate = self
-        testableLabel.offset = 100
+//        testableLabel.delegate = self
+//        testableLabel.offset = 100
+//        testableLabel.adjustsFontSizeToFitWidth = true
+        Toast.makeText(self, position: .bottom)
     }
+    
     
 //    let recog: UISwipeGestureRecognizer = {
 //        let rec = UISwipeGestureRecognizer()

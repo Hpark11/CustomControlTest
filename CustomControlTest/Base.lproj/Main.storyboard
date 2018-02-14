@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,24 +28,47 @@
                                     <outletCollection property="gestureRecognizers" destination="2L7-z0-6t7" appends="YES" id="Nen-cl-a5u"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wqkejqwklejlkwqejklqwneklqwnekl2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-sC-1CI" customClass="SwipableLabel" customModule="CustomControlTest" customModuleProvider="target">
-                                <rect key="frame" x="51.5" y="216" width="272.5" height="21"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wqkejqwklejlkwqejklqwneklqwnekl2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-sC-1CI" customClass="SwipableLabel" customModule="CustomControlTest" customModuleProvider="target">
+                                <rect key="frame" x="9" y="216" width="357" height="27.5"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3oT-09-jYK" appends="YES" id="R44-Pa-6YH"/>
                                 </connections>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvp-Nu-23H">
+                                <rect key="frame" x="40" y="497" width="295" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nXd-rO-pjZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="nXd-rO-pjZ" secondAttribute="height" multiplier="1:1" id="C2H-I7-K0w"/>
+                                            <constraint firstAttribute="width" constant="50" id="wql-Vs-ats"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qy4-Ip-yLz">
+                                        <rect key="frame" x="50" y="0.0" width="245" height="50"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LWA-sC-1CI" secondAttribute="trailing" constant="9" id="DNk-cy-oqy"/>
+                            <constraint firstItem="LWA-sC-1CI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="EsX-oY-8hg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h4t-9J-sdG" secondAttribute="trailing" constant="96" id="F38-Ic-YNu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="h4t-9J-sdG" secondAttribute="bottom" constant="497" id="QLQ-jX-2Ti"/>
                             <constraint firstItem="LWA-sC-1CI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RQa-rE-hog"/>
+                            <constraint firstAttribute="bottom" secondItem="qvp-Nu-23H" secondAttribute="bottom" constant="120" id="UWI-9r-uNr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qvp-Nu-23H" secondAttribute="trailing" constant="40" id="Vg0-3X-0HL"/>
                             <constraint firstItem="h4t-9J-sdG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="eBK-Ee-Edh"/>
+                            <constraint firstItem="qvp-Nu-23H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ojv-9J-fLT"/>
                             <constraint firstItem="h4t-9J-sdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="t8K-w1-fSI"/>
                             <constraint firstItem="LWA-sC-1CI" firstAttribute="top" secondItem="h4t-9J-sdG" secondAttribute="bottom" constant="46" id="yQM-Et-elQ"/>
                         </constraints>
@@ -72,5 +96,49 @@
                 </swipeGestureRecognizer>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="kFp-7q-fuA">
+            <objects>
+                <viewController id="z0d-p2-67H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FjT-uS-3sf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aon-n2-JjU">
+                                <rect key="frame" x="36.5" y="461" width="303" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ewfwefwefewfweewfwefwefwefwefwefwefewfewfwefewfewfwefwefwefwefwefwefewfwefwefwefwefqweqweqw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urG-H8-uUF">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="61.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="urG-H8-uUF" secondAttribute="height" id="8HK-QU-h1g"/>
+                                    <constraint firstItem="urG-H8-uUF" firstAttribute="centerY" secondItem="aon-n2-JjU" secondAttribute="centerY" id="Tgn-h8-mLs"/>
+                                    <constraint firstAttribute="width" secondItem="urG-H8-uUF" secondAttribute="width" id="Zgk-mr-Awy"/>
+                                    <constraint firstItem="urG-H8-uUF" firstAttribute="centerX" secondItem="aon-n2-JjU" secondAttribute="centerX" id="uH0-dV-2vZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aon-n2-JjU" firstAttribute="centerX" secondItem="FjT-uS-3sf" secondAttribute="centerX" id="YHV-m6-aFr"/>
+                            <constraint firstItem="aon-n2-JjU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FjT-uS-3sf" secondAttribute="leading" constant="16" id="c6d-yW-bMA"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aon-n2-JjU" secondAttribute="trailing" constant="32" id="wyr-eu-mGN"/>
+                            <constraint firstItem="SMr-0H-hgr" firstAttribute="bottom" secondItem="aon-n2-JjU" secondAttribute="bottom" constant="145" id="y0w-fM-SYV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SMr-0H-hgr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Io-fm-0kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1460" y="34"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="359" height="359"/>
+    </resources>
 </document>

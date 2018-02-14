@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A3AB5D3202ABCD600F7B2C1 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */; };
+		5A3BF719203242AC00EAF3A5 /* SwiftyToaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3BF718203242AC00EAF3A5 /* SwiftyToaster.swift */; };
+		5A73D7522033E1430028C54E /* SwiftyToasterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73D7512033E1430028C54E /* SwiftyToasterLabel.swift */; };
 		5A8CF24B2029C0BF00A1F24E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF24A2029C0BF00A1F24E /* AppDelegate.swift */; };
 		5A8CF24D2029C0BF00A1F24E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF24C2029C0BF00A1F24E /* ViewController.swift */; };
 		5A8CF2502029C0BF00A1F24E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF24E2029C0BF00A1F24E /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		5A3BF718203242AC00EAF3A5 /* SwiftyToaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyToaster.swift; sourceTree = "<group>"; };
+		5A73D7512033E1430028C54E /* SwiftyToasterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyToasterLabel.swift; sourceTree = "<group>"; };
 		5A8CF2472029C0BF00A1F24E /* CustomControlTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControlTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8CF24A2029C0BF00A1F24E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A8CF24C2029C0BF00A1F24E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				5A8CF2562029C0BF00A1F24E /* Info.plist */,
 				5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */,
 				5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */,
+				5A3BF718203242AC00EAF3A5 /* SwiftyToaster.swift */,
+				5A73D7512033E1430028C54E /* SwiftyToasterLabel.swift */,
 			);
 			path = CustomControlTest;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			files = (
 				5A3AB5D3202ABCD600F7B2C1 /* SwipeDirection.swift in Sources */,
 				5A8CF24D2029C0BF00A1F24E /* ViewController.swift in Sources */,
+				5A3BF719203242AC00EAF3A5 /* SwiftyToaster.swift in Sources */,
+				5A73D7522033E1430028C54E /* SwiftyToasterLabel.swift in Sources */,
 				5A8CF24B2029C0BF00A1F24E /* AppDelegate.swift in Sources */,
 				5A8CF25D2029C1AB00A1F24E /* SwipableLabel.swift in Sources */,
 			);

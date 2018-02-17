@@ -19,10 +19,14 @@ class ViewController: UIViewController {
         
 //        testableLabel.delegate = self
 //        testableLabel.offset = 100
-//        testableLabel.adjustsFontSizeToFitWidth = true
-        Toast.makeText(self, position: .bottom)
+//        testableLabel.adjustsFontSizeToFitWidth = true d
     }
     
+    @IBAction func tapped(_ sender: Any) {
+        Toast.makeText(self, text: "Hello to you sir Hello  u sirHello to you sir Hello  u sirHello to you sir Hello  u sirHello to you sir Hello  u sir", position: .top, icon: UIImage(named: "logo"), iconWidth: 40)
+        Toast.makeText(self, text: "Hello goody~", position: .center)
+        Toast.makeText(self, text: "Hello everybody~")
+    }
     
 //    let recog: UISwipeGestureRecognizer = {
 //        let rec = UISwipeGestureRecognizer()

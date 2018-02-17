@@ -1,10 +1,3 @@
-//
-//  SwiftyToasterLabel.swift
-//  CustomControlTest
-//
-//  Created by croquiscom on 2018. 2. 14..
-//  Copyright © 2018년 personal. All rights reserved.
-//
 
 import UIKit
 

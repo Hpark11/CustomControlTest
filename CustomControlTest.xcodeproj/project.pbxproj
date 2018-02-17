@@ -16,6 +16,9 @@
 		5A8CF2522029C0BF00A1F24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF2512029C0BF00A1F24E /* Assets.xcassets */; };
 		5A8CF2552029C0BF00A1F24E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8CF2532029C0BF00A1F24E /* LaunchScreen.storyboard */; };
 		5A8CF25D2029C1AB00A1F24E /* SwipableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */; };
+		5ACDDEE020368CF000B012A9 /* SwiftyToasterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACDDEDF20368CF000B012A9 /* SwiftyToasterConfiguration.swift */; };
+		5ACDDEE22036F79000B012A9 /* SwiftyToasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACDDEE12036F79000B012A9 /* SwiftyToasterView.swift */; };
+		5ACDDEE42037FC2A00B012A9 /* SwiftyToasterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACDDEE32037FC2A00B012A9 /* SwiftyToasterOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		5A8CF2542029C0BF00A1F24E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A8CF2562029C0BF00A1F24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A8CF25C2029C1AB00A1F24E /* SwipableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableLabel.swift; sourceTree = "<group>"; };
+		5ACDDEDF20368CF000B012A9 /* SwiftyToasterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyToasterConfiguration.swift; sourceTree = "<group>"; };
+		5ACDDEE12036F79000B012A9 /* SwiftyToasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyToasterView.swift; sourceTree = "<group>"; };
+		5ACDDEE32037FC2A00B012A9 /* SwiftyToasterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyToasterOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 				5A3AB5D2202ABCD600F7B2C1 /* SwipeDirection.swift */,
 				5A3BF718203242AC00EAF3A5 /* SwiftyToaster.swift */,
 				5A73D7512033E1430028C54E /* SwiftyToasterLabel.swift */,
+				5ACDDEDF20368CF000B012A9 /* SwiftyToasterConfiguration.swift */,
+				5ACDDEE12036F79000B012A9 /* SwiftyToasterView.swift */,
+				5ACDDEE32037FC2A00B012A9 /* SwiftyToasterOptions.swift */,
 			);
 			path = CustomControlTest;
 			sourceTree = "<group>";
@@ -153,7 +162,10 @@
 				5A3BF719203242AC00EAF3A5 /* SwiftyToaster.swift in Sources */,
 				5A73D7522033E1430028C54E /* SwiftyToasterLabel.swift in Sources */,
 				5A8CF24B2029C0BF00A1F24E /* AppDelegate.swift in Sources */,
+				5ACDDEE22036F79000B012A9 /* SwiftyToasterView.swift in Sources */,
+				5ACDDEE020368CF000B012A9 /* SwiftyToasterConfiguration.swift in Sources */,
 				5A8CF25D2029C1AB00A1F24E /* SwipableLabel.swift in Sources */,
+				5ACDDEE42037FC2A00B012A9 /* SwiftyToasterOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

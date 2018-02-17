@@ -43,28 +43,28 @@ class SwiftyToaster: NSObject {
         placeToast(view, baseView: base.view, position: position, offset: offset)
         placeContent(view.content, container: view, icon: icon, iconWidth: iconWidth)
         
-        toastIn(view, enter: .curlDown) { _ in
-            toastOut(view, exit: .curlUp)
+        toastIn(view, enter: .dashFromLeft) { _ in
+            toastOut(view, exit: .dashToLeft)
         }
-        
-        UIView.transition(with: view, duration: 0.01, options: [.curveEaseOut, .transitionCrossDissolve], animations: {
-            view.isHidden = true
-        }, completion: { _ in
-
-            
-            UIView.transition(with: view, duration: 0.8, options: [.curveEaseIn, .transitionCurlDown], animations: {
-                view.isHidden = false
-            }, completion: { _ in
-                
-                call(after: 3, completion: {
-                    UIView.transition(with: view, duration: 0.8, options: [.curveEaseOut, .transitionCurlUp], animations: {
-                        view.isHidden = true
-                    }, completion: { _ in
-                        view.removeFromSuperview()
-                    })
-                })
-            })
-        })
+//
+//        UIView.transition(with: view, duration: 0.01, options: [.curveEaseOut, .transitionCrossDissolve], animations: {
+//            view.isHidden = true
+//        }, completion: { _ in
+//
+//
+//            UIView.transition(with: view, duration: 0.8, options: [.curveEaseIn, .transitionCurlDown], animations: {
+//                view.isHidden = false
+//            }, completion: { _ in
+//
+//                call(after: 3, completion: {
+//                    UIView.transition(with: view, duration: 0.8, options: [.curveEaseOut, .transitionCurlUp], animations: {
+//                        view.isHidden = true
+//                    }, completion: { _ in
+//                        view.removeFromSuperview()
+//                    })
+//                })
+//            })
+//        })
     }
     
     private static func call(after: Double, completion: @escaping () -> Void) {
@@ -197,22 +197,35 @@ class SwiftyToaster: NSObject {
     }
     
     private static func toastOut<T>(_ view: SwiftyToasterView<T>, exit: ToastExit) {
+        guard let baseView = view.superview else { return }
+        let option: UIViewAnimationOptions
+        
         switch exit {
-        case .dashToLeft: break
-        case .dashToRight: break
-        case .dashToTop: break
-        case .dashToBottom: break
-        case .flipFromLeft: break
-        case .flipFromRight: break
-        case .flipFromTop: break
-        case .flipFromBottom: break
-        case .curlUp: break
-        case .fadeOut: break
-        case .scaleDown: break
+        case .flipFromLeft: option = .transitionFlipFromLeft
+        case .flipFromRight: option = .transitionFlipFromRight
+        case .flipFromTop: option = .transitionFlipFromTop
+        case .flipFromBottom: option = .transitionFlipFromBottom
+        case .curlUp: option = .transitionCurlDown
+        case .fadeOut: option = .transitionCrossDissolve
+        default:
+            UIView.animate(withDuration: 0.72, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
+                view.isHidden = true
+                switch exit {
+                case .dashToLeft: view.frame.origin.x = -(view.bounds.width)
+                case .dashToRight: view.frame.origin.x = baseView.bounds.width
+                case .dashToTop: view.frame.origin.y = -(view.bounds.height)
+                case .dashToBottom: view.frame.origin.y = baseView.bounds.height
+                case .scaleDown: view.frame.size = CGSize(width: view.bounds.width / 2, height: view.bounds.height / 2)
+                default: break
+                }
+            }, completion: { _ in
+                view.removeFromSuperview()
+            })
+            return
         }
         
         call(after: 3, completion: {
-            UIView.transition(with: view, duration: 0.8, options: [.curveEaseOut, .transitionCurlUp], animations: {
+            UIView.transition(with: view, duration: 0.72, options: [.curveEaseOut, option], animations: {
                 view.isHidden = true
             }, completion: { _ in
                 view.removeFromSuperview()
